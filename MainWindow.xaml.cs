@@ -24,5 +24,43 @@ namespace IO_Projekt
         {
             InitializeComponent();
         }
+
+        private void exitMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void saveMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+            dlg.FileName = "Document"; // Default file name
+            dlg.DefaultExt = ".text"; // Default file extension
+            dlg.Filter = "Text document (.txt)|*.txt"; // Filter files by extension
+
+            // Show save file dialog box
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Process save file dialog box results
+            if (result == true)
+            {
+                // Save document
+                System.IO.File.WriteAllText(dlg.FileName, editSpace.Text);
+            }
+        }
+
+        private void loadMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.FileName = "Example";
+            dlg.DefaultExt = ".txt";
+            dlg.Filter = "Text document (.txt)|*.txt";
+
+            Nullable<bool> result = dlg.ShowDialog();
+
+            if(result == true)
+            {
+                editSpace.Text = System.IO.File.ReadAllText(dlg.FileName);
+            }
+        }
     }
 }
