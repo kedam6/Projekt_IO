@@ -62,11 +62,6 @@ namespace IO_Projekt
 
         }
 
-        private void aboutMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            var aboutWin = new Nigga.AboutWindow();
-            aboutWin.ShowDialog();
-        }
 
         private void newMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -113,6 +108,12 @@ namespace IO_Projekt
             {
                 //
             }
+        }
+
+        private void aboutMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Nigga.AboutWindow f = new Nigga.AboutWindow();
+            f.ShowDialog();
         }
 
 

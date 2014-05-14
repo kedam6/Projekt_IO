@@ -1,8 +1,9 @@
 ﻿<Window x:Class="Nigga.AboutWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AboutWindow" Height="300" Width="300">
+        Title="AboutWindow" Height="132.666" Width="300">
     <Grid>
-        
+        <Label Content="     THIS PROGRAM HAVE BEEN WRITING BY THE&#xA;         ORANGE, PINK AND YELLOW LAMMAS." HorizontalAlignment="Center" Height="103" VerticalAlignment="Top" Width="292" Background="#FFDA3535"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="100,62,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1" RenderTransformOrigin="1.02,-1.318"/>
     </Grid>
 </Window>
