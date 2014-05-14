@@ -1,0 +1,5 @@
+1. Okienko about
+2. Edit space upgrade
+3. Podstawowa edycja, przyda³yby siê te¿ kontekstowe edycje typu ctrl + c ctrl + v czy ctrl + z 
+4. Bookmarki
+<optional> 5. Splashscreen
