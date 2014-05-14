@@ -68,7 +68,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="IOSystem.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -105,6 +104,13 @@
     <SplashScreen Include="Resources\Images\woofwoof.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </SplashScreen>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\format_text_bold.png" />
+    <Resource Include="Resources\Icons\format_text_italic.png" />
+    <Resource Include="Resources\Icons\format_text_underline.png" />
+    <Resource Include="Resources\Icons\load.png" />
+    <Resource Include="Resources\Icons\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
