@@ -6,20 +6,24 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="0*" />
-            <ColumnDefinition Width="513*" />
+            <ColumnDefinition Width="216*" />
+            <ColumnDefinition Width="297*"/>
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="0*" />
         </Grid.ColumnDefinitions>
         <TextBox HorizontalAlignment="Left" Height="3" Margin="3,118,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1" Grid.Column="2" />
-        <TextBox x:Name="editSpace" Height="277" TextWrapping="Wrap" Width="495" Margin="8,33,0,0" Grid.Column="2" HorizontalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
-        <Menu Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="517">
+        <TextBox x:Name="editSpace" TextWrapping="Wrap" Margin="0,38,0,0" Grid.Column="2" HorizontalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2" />
+        <Menu Grid.ColumnSpan="5" Height="28" VerticalAlignment="Top">
             <MenuItem x:Name="fileMenu" Header="File" >
+                <MenuItem x:Name="newMenuItem" Header="New" HorizontalAlignment="Left" Width="140" Click="newMenuItem_Click"/>
                 <MenuItem x:Name="saveMenuItem" Header="Save" HorizontalAlignment="Left" Width="140" Click="saveMenuItem_Click"/>
                 <MenuItem x:Name="loadMenuItem" Header="Load" HorizontalAlignment="Left" Width="140" Click="loadMenuItem_Click"/>
                 <MenuItem x:Name="exitMenuItem" Header="Exit" HorizontalAlignment="Left" Width="140" Click="exitMenuItem_Click"/>
             </MenuItem>
             <MenuItem x:Name="editMenu" Header="Edit" />
-            <MenuItem x:Name="helpMenu" Header="Help" />
+            <MenuItem x:Name="helpMenu" Header="Help" >
+                <MenuItem x:Name="aboutMenuItem" Header="About" HorizontalAlignment="Left" Width="140" Click="aboutMenuItem_Click"/>
+            </MenuItem>
         </Menu>
     </Grid>
 </Window>

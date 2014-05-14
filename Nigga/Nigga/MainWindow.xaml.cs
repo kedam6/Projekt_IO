@@ -62,5 +62,16 @@ namespace IO_Projekt
                 editSpace.Text = System.IO.File.ReadAllText(dlg.FileName);
             }
         }
+
+        private void aboutMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Nigga.AboutWindow aboutWin = new Nigga.AboutWindow();
+            aboutWin.ShowDialog();
+        }
+
+        private void newMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            editSpace.Text = "";
+        }
     }
 }
