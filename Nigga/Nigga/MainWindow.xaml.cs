@@ -27,7 +27,7 @@ namespace IO_Projekt
             InitializeComponent();
             cmbFontFamily.ItemsSource = Fonts.SystemFontFamilies.OrderBy(f => f.Source);
             cmbFontSize.ItemsSource = new List<double>() { 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72 };
-
+            
         }
 
         private void exitMenuItem_Click(object sender, RoutedEventArgs e)
@@ -99,6 +99,20 @@ namespace IO_Projekt
         private void cmbFontSize_TextChanged(object sender, TextChangedEventArgs e)
         {
             editSpace.Selection.ApplyPropertyValue(Inline.FontSizeProperty, cmbFontSize.Text);
+        }
+
+        private void editSpace_MouseEnter(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void editSpace_GotFocus(object sender, RoutedEventArgs e)
+        {
+            int test;
+            if (cmbFontFamily.SelectedItem != null && Int32.TryParse(cmbFontSize.Text, out test))
+            {
+                //
+            }
         }
 
 
