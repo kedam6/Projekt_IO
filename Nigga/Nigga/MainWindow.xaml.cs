@@ -117,5 +117,46 @@ namespace IO_Projekt
         }
 
 
+
+        private void SelectAllTextMenuIte_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            editSpace.SelectAll();
+
+        }
+
+        private void cutMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (editSpace.Selection.Text != "")
+                editSpace.Cut();
+        }
+
+        private void copyMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (editSpace.Selection.Text.Length > 0)
+                editSpace.Copy();
+        }
+
+        private void pasteMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text) == true)
+            {
+                editSpace.Paste();
+            }
+        }
+
+        private void undoMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (editSpace.CanUndo == true)
+            {
+                editSpace.Undo();
+            }
+        }
+
+
+
+
+
     }
 }
