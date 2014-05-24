@@ -13,3 +13,5 @@ C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.Propert
 C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.csproj.GenerateResource.Cache
 C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.exe
 C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.pdb
+C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Replace.baml
+C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Replace.g.cs

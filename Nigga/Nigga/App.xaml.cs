@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace IO_Projekt
+namespace Nigga
 {
     /// <summary>
     /// Interaction logic for App.xaml

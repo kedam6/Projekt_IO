@@ -15,20 +15,25 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 
-namespace IO_Projekt
+namespace Nigga
 {
+   
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
             cmbFontFamily.ItemsSource = Fonts.SystemFontFamilies.OrderBy(f => f.Source);
             cmbFontSize.ItemsSource = new List<double>() { 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72 };
             
+            
         }
+
+ 
 
         private void exitMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -112,7 +117,7 @@ namespace IO_Projekt
 
         private void aboutMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Nigga.AboutWindow f = new Nigga.AboutWindow();
+            AboutWindow f = new Nigga.AboutWindow();
             f.ShowDialog();
         }
 
@@ -120,7 +125,6 @@ namespace IO_Projekt
 
         private void SelectAllTextMenuIte_Click(object sender, RoutedEventArgs e)
         {
-
 
             editSpace.SelectAll();
 
@@ -140,7 +144,7 @@ namespace IO_Projekt
 
         private void pasteMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text) == true)
+            if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text))
             {
                 editSpace.Paste();
             }
@@ -153,6 +157,14 @@ namespace IO_Projekt
                 editSpace.Undo();
             }
         }
+
+        private void replaceMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Replace  d = new Nigga.Replace();
+            d.ShowDialog();
+        }
+
+
 
 
 
