@@ -164,6 +164,11 @@ namespace Nigga
             d.ShowDialog();
         }
 
+        private void ScrollEvent(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+            //tutaj trzeba napisac scrollowanie
+        }
+
 
 
 
