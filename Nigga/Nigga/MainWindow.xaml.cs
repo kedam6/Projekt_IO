@@ -125,8 +125,14 @@ namespace Nigga
 
         private void SelectAllTextMenuIte_Click(object sender, RoutedEventArgs e)
         {
-
-            editSpace.SelectAll();
+            if (editSpace.Selection.IsEmpty)
+                editSpace.SelectAll();
+            else
+            {
+                TextPointer a = editSpace.Selection.Start;
+                TextPointer b = editSpace.Selection.End;
+                
+            }
 
         }
 
@@ -146,7 +152,14 @@ namespace Nigga
         {
             if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text))
             {
+                //editSpace.Paste();
+               // IDataObject iData = Clipboard.GetDataObject();
+               // String a = (String)iData.GetData(DataFormats.Text);
+               //// a.Replace(Environment.NewLine, "*");
+                //iData.SetData(DataFormats.Text, a);
+                ////Clipboard.SetDataObject(iData);
                 editSpace.Paste();
+                
             }
         }
 
@@ -167,6 +180,16 @@ namespace Nigga
         private void ScrollEvent(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
             //tutaj trzeba napisac scrollowanie
+        
+           
+        }
+
+        private void FindMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            //tutaj postaram sie napisac FIND
+
+            FindWindow a = new Nigga.FindWindow();
+            a.ShowDialog();
         }
 
 

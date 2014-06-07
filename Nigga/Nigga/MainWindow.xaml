@@ -33,6 +33,7 @@
                 <MenuItem x:Name="SelectAllTextMenuItem" Header="Select All" HorizontalAlignment="Left" Width="140" Click="SelectAllTextMenuIte_Click"/>
                 <Separator HorizontalAlignment="Left" Width="140"/>
                 <MenuItem x:Name="ReplaceMenuItem" Header="Replace" Click="replaceMenuItem_Click"></MenuItem>
+                <MenuItem x:Name="FindMenuItem" Header="Find" HorizontalAlignment="Left" Width="140" Click="FindMenuItem_Click"/>
 
             </MenuItem>
             <MenuItem x:Name="helpMenu" Header="Help" >

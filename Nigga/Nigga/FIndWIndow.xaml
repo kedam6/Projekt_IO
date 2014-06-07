@@ -1,0 +1,27 @@
+﻿<Window x:Class="Nigga.FindWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Find" Height="100" Width="250" Icon="Resources/Icons/free_rainbow_llama_icon_by_littlemissllamalover-d3ijsj2.gif" MinWidth="250" MinHeight="100" MaxWidth="250" MaxHeight="100" HorizontalContentAlignment="Right">
+    <Grid Background="#FFEEF5FD">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="157*"/>
+            <ColumnDefinition Width="82*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Find in text" VerticalAlignment="Top" Width="160" Margin="10,10,0,0" Grid.ColumnSpan="2" TouchEnter="FindText_EnterClick"/>
+        <Label Content="Found: " HorizontalAlignment="Left" Height="30" Margin="11,32,0,0" VerticalAlignment="Top" Width="47" Grid.Column="1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="0" Margin="11,10,0,0" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.83"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Find next" HorizontalAlignment="Left" Height="23" Margin="11,10,0,0" VerticalAlignment="Top" Width="61" Click="FindNextInText_Click" Grid.Column="1"/>
+        <CheckBox x:Name="Litery" Content="uwzględnij wielość liter " HorizontalAlignment="Left" Height="15" Margin="10,38,0,0" VerticalAlignment="Top" Width="148" Checked="FindInTextCheck" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="Finds" HorizontalAlignment="Left" Height="21" Margin="44,37,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.352,0.235" LineHeight="20" TextAlignment="Center" Grid.Column="1"/>
+
+    </Grid>
+</Window>
