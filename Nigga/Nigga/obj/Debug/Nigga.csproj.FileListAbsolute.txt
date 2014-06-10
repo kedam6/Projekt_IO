@@ -1,6 +1,7 @@
 C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\bin\Debug\Nigga.exe.config
 C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\bin\Debug\Nigga.exe
 C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\bin\Debug\Nigga.pdb
+C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.csprojResolveAssemblyReference.cache
 C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\AboutWindow.baml
 C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\MainWindow.baml
 C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\AboutWindow.g.cs
@@ -31,6 +32,20 @@ C:\Users\Klaudia\Documents\GitHub\Nigga\Nigga\obj\Debug\Nigga_MarkupCompile.cach
 C:\Users\Klaudia\Documents\GitHub\Nigga\Nigga\obj\Debug\Nigga.g.resources
 C:\Users\Klaudia\Documents\GitHub\Nigga\Nigga\obj\Debug\Nigga.Properties.Resources.resources
 C:\Users\Klaudia\Documents\GitHub\Nigga\Nigga\obj\Debug\Nigga.csproj.GenerateResource.Cache
-C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\FIndWIndow.baml
-C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\FIndWIndow.g.cs
-C:\Users\Klaudia\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.csprojResolveAssemblyReference.cache
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\bin\Debug\Nigga.exe.config
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.exe
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.pdb
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\bin\Debug\Nigga.exe
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\bin\Debug\Nigga.pdb
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.csprojResolveAssemblyReference.cache
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\App.g.cs
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga_MarkupCompile.cache
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.g.resources
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.Properties.Resources.resources
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.csproj.GenerateResource.Cache
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\AboutWindow.baml
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\MainWindow.baml
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\Replace.baml
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\AboutWindow.g.cs
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\MainWindow.g.cs
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\Replace.g.cs
