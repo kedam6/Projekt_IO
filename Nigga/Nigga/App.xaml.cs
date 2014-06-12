@@ -13,5 +13,7 @@ namespace Nigga
     /// </summary>
     public partial class App : Application
     {
+        public static int NewCounter = 0;
+
     }
 }

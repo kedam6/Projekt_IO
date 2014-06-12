@@ -14,6 +14,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using Nigga.Tools;
+
+
+
 
 namespace Nigga
 {
@@ -23,13 +27,32 @@ namespace Nigga
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
+
+        public static RoutedCommand MyCommand = new RoutedCommand();
+        private bool _canExecute = true;
+        private TabSelector selector;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            selector = new TabSelector(tabs);
+
+            editSpace.Visibility = System.Windows.Visibility.Hidden;
+
             cmbFontFamily.ItemsSource = Fonts.SystemFontFamilies.OrderBy(f => f.Source);
             cmbFontSize.ItemsSource = new List<double>() { 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72 };
+
+            CommandBinding cb = new CommandBinding(MyCommand, SelectAllExecute, SelectAllCanExecute);
+            KeyGesture gest = new KeyGesture(Key.A, ModifierKeys.Control);
+            InputBinding ib = new InputBinding(MyCommand, gest);
+            this.InputBindings.Add(ib);
+
+            editSpace.Document = new FlowDocument();
             
+            editSpace.SelectAll();
+            editSpace.Selection.Text = "";
             
         }
 
@@ -50,7 +73,11 @@ namespace Nigga
                 FileStream fileStream = new FileStream(dlg.FileName, FileMode.Create);
                 TextRange range = new TextRange(editSpace.Document.ContentStart, editSpace.Document.ContentEnd);
                 range.Save(fileStream, DataFormats.Rtf);
+
+                selector.GetCurrentSelection().Header = dlg.SafeFileName.Split('.')[0];
             }
+
+            
 
         }
 
@@ -63,6 +90,7 @@ namespace Nigga
                 FileStream fileStream = new FileStream(dlg.FileName, FileMode.Open);
                 TextRange range = new TextRange(editSpace.Document.ContentStart, editSpace.Document.ContentEnd);
                 range.Load(fileStream, DataFormats.Rtf);
+                selector.CreateAndSelectNewTab(dlg.SafeFileName.Split('.')[0]);
             }
 
         }
@@ -70,7 +98,23 @@ namespace Nigga
 
         private void newMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            editSpace.Document = new FlowDocument();
+            if (editSpace.Visibility == System.Windows.Visibility.Hidden)
+                editSpace.Visibility = System.Windows.Visibility.Visible;
+
+            EnhancedTabItem newOne;
+            
+            if(App.NewCounter == 0)
+            {
+                newOne = selector.CreateAndSelectNewTab("New");
+            }
+            else
+                newOne = selector.CreateAndSelectNewTab(String.Format("New ({0})", App.NewCounter));
+
+
+            App.NewCounter++;
+
+            editSpace.Document = newOne.CurrentDocument;
+            
         }
 
         private void editSpace_SelectionChanged(object sender, RoutedEventArgs e)
@@ -101,38 +145,30 @@ namespace Nigga
             editSpace.Selection.ApplyPropertyValue(Inline.FontSizeProperty, cmbFontSize.Text);
         }
 
-        private void editSpace_MouseEnter(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void editSpace_GotFocus(object sender, RoutedEventArgs e)
-        {
-            int test;
-            if (cmbFontFamily.SelectedItem != null && Int32.TryParse(cmbFontSize.Text, out test))
-            {
-                //
-            }
-        }
-
         private void aboutMenuItem_Click(object sender, RoutedEventArgs e)
         {
             AboutWindow f = new Nigga.AboutWindow();
             f.ShowDialog();
         }
 
+        private void SelectAllCanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void SelectAllExecute(object sender, ExecutedRoutedEventArgs e)
+        {
+            TextRange tx = new TextRange(editSpace.Document.ContentStart, editSpace.Document.ContentEnd);
+            TextPointer ending = tx.End.GetPositionAtOffset(-1, LogicalDirection.Forward);
+            editSpace.Selection.Select(editSpace.Document.ContentStart, ending);
+            _canExecute = !_canExecute;
+        }
 
 
         private void SelectAllTextMenuIte_Click(object sender, RoutedEventArgs e)
         {
-            if (editSpace.Selection.IsEmpty)
-                editSpace.SelectAll();
-            else
-            {
-                TextPointer a = editSpace.Selection.Start;
-                TextPointer b = editSpace.Selection.End;
-                
-            }
+
+            editSpace.SelectAll();
 
         }
 
@@ -152,14 +188,7 @@ namespace Nigga
         {
             if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text))
             {
-                //editSpace.Paste();
-               // IDataObject iData = Clipboard.GetDataObject();
-               // String a = (String)iData.GetData(DataFormats.Text);
-               //// a.Replace(Environment.NewLine, "*");
-                //iData.SetData(DataFormats.Text, a);
-                ////Clipboard.SetDataObject(iData);
                 editSpace.Paste();
-                
             }
         }
 
@@ -180,8 +209,25 @@ namespace Nigga
         private void ScrollEvent(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
             //tutaj trzeba napisac scrollowanie
-        
-           
+        }
+
+        private void editSpace_Initialized(object sender, EventArgs e)
+        {
+            editSpace.SelectAll();
+            editSpace.Selection.Text = "";
+            
+        }
+
+        private void tabs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            TabControl source = (TabControl)e.Source;
+            EnhancedTabItem selected = (EnhancedTabItem)source.SelectedItem;
+            editSpace.Document = selected.CurrentDocument;
+        }
+
+        private void CloseTab_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
         }
 
         private void FindMenuItem_Click(object sender, RoutedEventArgs e)
