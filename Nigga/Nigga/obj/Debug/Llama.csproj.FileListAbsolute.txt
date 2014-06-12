@@ -1,0 +1,17 @@
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\AboutWindow.baml
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\MainWindow.baml
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\Replace.baml
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\AboutWindow.g.cs
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\MainWindow.g.cs
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\Replace.g.cs
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\App.g.cs
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga_MarkupCompile.cache
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.g.resources
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.Properties.Resources.resources
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Llama.csproj.GenerateResource.Cache
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.exe
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Nigga.pdb
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\bin\Debug\Nigga.exe.config
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\bin\Debug\Nigga.exe
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\bin\Debug\Nigga.pdb
+D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Llama.csprojResolveAssemblyReference.cache
