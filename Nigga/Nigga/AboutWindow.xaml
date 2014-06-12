@@ -7,7 +7,7 @@
             <RowDefinition Height="88*"/>
             <RowDefinition Height="41*"/>
         </Grid.RowDefinitions>
-        <Label Content="     THIS PROGRAM HAVE BEEN WRITING BY:&#xA;        THE ORANGE Llama: Damian Misiura,&#xA;        THE PINK Llama : Klaudia Olejniczak,&#xA;        THE YELLOW Llama: Aleksander Kużel." HorizontalAlignment="Center" Width="292" Background="#FFEEF5FD" FontStyle="Oblique" IsEnabled="False" Grid.RowSpan="2" Margin="0,0,0,-40" RenderTransformOrigin="0.5,0.5">
+        <Label Content="     THIS PROGRAM WAS WRITTEN BY:&#xA;        THE ORANGE Llama: Damian Misiura,&#xA;        THE PINK Llama : Klaudia Olejniczak,&#xA;        THE YELLOW Llama: Aleksander Kużel." HorizontalAlignment="Center" Width="292" Background="#FFEEF5FD" FontStyle="Oblique" IsEnabled="False" Grid.RowSpan="2" Margin="0,0,0,-40" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
