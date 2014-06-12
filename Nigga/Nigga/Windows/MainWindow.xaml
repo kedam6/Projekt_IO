@@ -84,11 +84,8 @@
                 <MouseBinding Command="SelectAll" MouseAction="LeftDoubleClick" />
             </RichTextBox.InputBindings>
         </RichTextBox>
-        <Grid x:Name="tabsGrid" HorizontalAlignment="Left" Height="28" Margin="2,52,-0.4,0" VerticalAlignment="Top" Width="612" Grid.ColumnSpan="6">
-            <TabControl x:Name="tabs" Margin="2,0,0,0" SelectionChanged="tabs_SelectionChanged">
-
-
-            </TabControl>    
+        <Grid x:Name="tabsGrid" Height="28" Margin="-2,52,-0.4,0" VerticalAlignment="Top" Grid.ColumnSpan="6">
+            <TabControl x:Name="tabs" SelectionChanged="tabs_SelectionChanged" HorizontalAlignment="Stretch"/>
         </Grid>
 
     </Grid>
