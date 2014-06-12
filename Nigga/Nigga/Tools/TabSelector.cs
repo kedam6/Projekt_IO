@@ -6,9 +6,11 @@ namespace Nigga.Tools
     public class TabSelector
     {
         public TabControl Container {get; set;}
+        private RichTextBox _text;
 
-        public TabSelector(TabControl content = null)
+        public TabSelector(RichTextBox r, TabControl content = null)
         {
+            _text = r;
             Container = content;
         }
 
@@ -24,9 +26,9 @@ namespace Nigga.Tools
 
         public EnhancedTabItem CreateAndSelectNewTab(string name)
         {
-            EnhancedTabItem newOne = new EnhancedTabItem();
+            EnhancedTabItem newOne = new EnhancedTabItem(_text);
             newOne.CurrentDocument = new FlowDocument();
-            newOne.Header = name;
+            newOne.Title = name;
             Container.Items.Add(newOne);
             newOne.Focus();
             return newOne;

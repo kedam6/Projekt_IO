@@ -70,3 +70,5 @@ C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.Propertie
 C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.csproj.GenerateResource.Cache
 C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\bin\Debug\Nigga.exe
 C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\bin\Debug\Nigga.pdb
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Controls\CloseableHeader.baml
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Controls\CloseableHeader.g.cs

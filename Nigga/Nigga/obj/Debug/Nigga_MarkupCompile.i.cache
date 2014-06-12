@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\App.xaml
-426666517
+51584498098
 
-161234674023
+162016045540
 12-1401562060
-Windows\AboutWindow.xaml;Windows\FIndWIndow.xaml;Windows\MainWindow.xaml;Windows\Replace.xaml;
+Controls\CloseableHeader.xaml;Windows\AboutWindow.xaml;Windows\FIndWIndow.xaml;Windows\MainWindow.xaml;Windows\Replace.xaml;
 resources\images\woofwoof.jpg
 False
 

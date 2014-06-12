@@ -37,7 +37,7 @@ namespace Nigga
         {
             InitializeComponent();
 
-            selector = new TabSelector(tabs);
+            selector = new TabSelector(editSpace, tabs);
 
             editSpace.Visibility = System.Windows.Visibility.Hidden;
 
@@ -74,7 +74,7 @@ namespace Nigga
                 TextRange range = new TextRange(editSpace.Document.ContentStart, editSpace.Document.ContentEnd);
                 range.Save(fileStream, DataFormats.Rtf);
                 fileStream.Close();
-                selector.GetCurrentSelection().Header = dlg.SafeFileName.Split('.')[0];
+                selector.GetCurrentSelection().Title = dlg.SafeFileName.Split('.')[0];
             }
 
             
@@ -233,7 +233,9 @@ namespace Nigga
         {
             TabControl source = (TabControl)e.Source;
             EnhancedTabItem selected = (EnhancedTabItem)source.SelectedItem;
-            editSpace.Document = selected.CurrentDocument;
+
+            if (tabs.Items.CurrentItem != null)
+                editSpace.Document = ((EnhancedTabItem)tabs.Items.CurrentItem).CurrentDocument;
         }
 
         private void CloseTab_Executed(object sender, ExecutedRoutedEventArgs e)

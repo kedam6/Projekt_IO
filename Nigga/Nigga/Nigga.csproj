@@ -53,7 +53,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Tools\CommandManagement.cs" />
+    <Compile Include="Controls\CloseableHeader.xaml.cs">
+      <DependentUpon>CloseableHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tools\EnhancedTabItem.cs" />
     <Compile Include="Tools\TabSelector.cs" />
     <Compile Include="Tools\TextSelector.cs" />
@@ -63,6 +65,10 @@
     <Compile Include="Windows\Replace.xaml.cs">
       <DependentUpon>Replace.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\CloseableHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AboutWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
