@@ -73,7 +73,7 @@ namespace Nigga
                 FileStream fileStream = new FileStream(dlg.FileName, FileMode.Create);
                 TextRange range = new TextRange(editSpace.Document.ContentStart, editSpace.Document.ContentEnd);
                 range.Save(fileStream, DataFormats.Rtf);
-
+                fileStream.Close();
                 selector.GetCurrentSelection().Header = dlg.SafeFileName.Split('.')[0];
             }
 
@@ -85,12 +85,23 @@ namespace Nigga
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Filter = "Rich Text Format (*.rtf)|*.rtf|All files (*.*)|*.*";
+
             if (dlg.ShowDialog() == true)
             {
-                FileStream fileStream = new FileStream(dlg.FileName, FileMode.Open);
-                TextRange range = new TextRange(editSpace.Document.ContentStart, editSpace.Document.ContentEnd);
-                range.Load(fileStream, DataFormats.Rtf);
-                selector.CreateAndSelectNewTab(dlg.SafeFileName.Split('.')[0]);
+
+                if (editSpace.Visibility == System.Windows.Visibility.Hidden)
+                    editSpace.Visibility = System.Windows.Visibility.Visible;
+
+                try
+                {
+                    selector.CreateAndSelectNewTab(dlg.SafeFileName.Split('.')[0]);
+                    editSpace.Selection.Load(new FileStream(dlg.FileName, FileMode.Open), DataFormats.Rtf);
+
+                }
+                catch(Exception ex)
+                {
+                    // TODO DELETE TAB
+                }
             }
 
         }
@@ -202,7 +213,7 @@ namespace Nigga
 
         private void replaceMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Replace  d = new Nigga.Replace();
+            Replace  d = new Nigga.Replace(editSpace);
             d.ShowDialog();
         }
 

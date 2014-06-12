@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Nigga.Tools;
 
 namespace Nigga
 {
@@ -19,18 +20,39 @@ namespace Nigga
     /// </summary>
     public partial class Replace : Window
     {
-        public Replace()
+        private RichTextBox _textBox;
+        private TextSelector _selector;
+
+        public Replace(RichTextBox text)
         {
             InitializeComponent();
+            _textBox = text;
+            _selector = new TextSelector(text); 
         }
 
         private void FindItem_Click(object sender, RoutedEventArgs e)
         {
-            if (!HereIsText.Text.Equals("Text"))
+            int count = 0, n = 0;
+
+            while ((n = _selector.GetFullText().Text.IndexOf(HereIsText.Text, n, StringComparison.InvariantCulture)) != -1)
             {
-                HereIsText.Text = "OK";
-                //Potrzebuje sie odwolac do editSpace w MainWindow. 
-                
+                n += HereIsText.Text.Length;
+                ++count;
+            }
+
+            Finds.Text = count.ToString();
+
+            switch(MessageBox.Show("Do you want to replace this item?", "Question", MessageBoxButton.YesNoCancel, MessageBoxImage.Exclamation, MessageBoxResult.Cancel))
+            {
+                case MessageBoxResult.Yes:
+                    _selector.GetFullText().Text = _selector.GetFullText().Text.Replace(HereIsText.Text, TextToReplace.Text);
+                    break;
+                case MessageBoxResult.No:
+                    break;
+                case MessageBoxResult.Cancel:
+                    this.Close();
+                    break;
+
             }
         }
     }

@@ -51,3 +51,22 @@ D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\MainWindo
 D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\Replace.g.cs
 D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\FIndWIndow.baml
 D:\Projekty\IO Projekt\Projekt_IO-master\Nigga\Nigga\obj\Debug\Windows\FIndWIndow.g.cs
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\bin\Debug\Nigga.exe.config
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.exe
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.pdb
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.csprojResolveAssemblyReference.cache
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Windows\AboutWindow.baml
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Windows\FIndWIndow.baml
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Windows\MainWindow.baml
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Windows\Replace.baml
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Windows\AboutWindow.g.cs
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Windows\FIndWIndow.g.cs
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Windows\Replace.g.cs
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\App.g.cs
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga_MarkupCompile.cache
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.g.resources
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.Properties.Resources.resources
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\obj\Debug\Nigga.csproj.GenerateResource.Cache
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\bin\Debug\Nigga.exe
+C:\Users\Kedam\Documents\GitHub\Projekt_IO\Nigga\Nigga\bin\Debug\Nigga.pdb
